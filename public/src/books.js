@@ -5,9 +5,10 @@ function findAuthorById(authors, id) {
 }
 
 function findBookById(books, id) {
-  // YOUR SOLUTION HERE
-   let found = books.find((book) => book.id === id );
-  return found;
+  let foundBooks = books.filter((book) => book.id === id);
+  
+  // Return the first matching book or undefined if no match is found
+  return foundBooks.length > 0 ? foundBooks[0] : undefined;
 }
 
 // NOTE: YOU DON'T HAVE TO EDIT THE FUNCTIONS BELOW
